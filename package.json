@@ -1,0 +1,56 @@
+{
+  "name": "react-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "jest": {
+    "setupFiles": [
+      "./test/jestsetup.js"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "moduleNameMapper": {
+      "^.+\\.(css)$": "identity-obj-proxy"
+    }
+  },
+  "dependencies": {
+    "react": "16.2.0",
+    "react-dom": "16.2.0",
+    "react-redux": "5.0.6",
+    "redux": "3.7.2",
+    "redux-actions": "2.2.1",
+    "redux-define": "1.1.1",
+    "redux-logger": "3.0.6",
+    "redux-observable": "0.17.0",
+    "rxjs": "5.5.6"
+  },
+  "devDependencies": {
+    "babel-core": "6.26.0",
+    "babel-loader": "7.1.2",
+    "babel-preset-env": "1.6.1",
+    "babel-preset-react": "6.24.1",
+    "css-loader": "0.28.9",
+    "enzyme": "3.3.0",
+    "enzyme-adapter-react-16": "1.1.1",
+    "enzyme-to-json": "3.3.1",
+    "extract-text-webpack-plugin": "3.0.2",
+    "file-loader": "1.1.6",
+    "html-webpack-plugin": "2.30.1",
+    "identity-obj-proxy": "3.0.0",
+    "jest": "22.4.2",
+    "postcss-loader": "2.0.10",
+    "react-test-renderer": "16.2.0",
+    "style-loader": "0.20.1",
+    "webpack": "3.10.0",
+    "webpack-combine-loaders": "2.0.3",
+    "webpack-dev-server": "2.11.1",
+    "webpack-merge": "4.1.1"
+  }
+}
