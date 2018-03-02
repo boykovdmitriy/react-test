@@ -2,6 +2,8 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const combineLoaders = require('webpack-combine-loaders');
 
+const pathToApp = path.resolve(__dirname, 'src', 'app');
+const pathToNodeModules = path.resolve(__dirname, 'node_modules');
 const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
     template: './src/index.html',
     filename: 'index.html',
@@ -20,13 +22,14 @@ module.exports = {
     },
     resolve: {
         extensions: ['.js', '.jsx', '.css'],
+        modules: [pathToApp, pathToNodeModules]
     },
     module: {
         loaders: [
             {test: /\.(js|jsx)$/, loader: 'babel-loader', exclude: /node_modules/},
             {
                 test: /\.css$/,
-                include: [ path.resolve(__dirname, 'src', 'app')],
+                include: [path.resolve(__dirname, 'src', 'app')],
                 loader: combineLoaders([
                     {
                         loader: 'style-loader'
@@ -40,7 +43,7 @@ module.exports = {
                 ])
             }, {
                 test: /\.css$/,
-                include: [ path.resolve(__dirname, 'src', 'styles'), path.resolve(__dirname, 'node_modules')],
+                include: [path.resolve(__dirname, 'src', 'styles'), path.resolve(__dirname, 'node_modules')],
                 loader: combineLoaders([
                     {
                         loader: 'style-loader'
