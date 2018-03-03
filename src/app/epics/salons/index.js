@@ -43,7 +43,7 @@ export function salonRequest(action$) {
                 .map(data => {
                     return {
                         type: Salons.SALON_SUCCESS,
-                        payload: data,
+                        payload: data.response,
                     };
                 })
                 .catch(error => {

@@ -1,6 +1,6 @@
 import React from "react";
 import {
-    BrowserRouter as Router,
+    BrowserRouter,
     Route,
     Switch
 } from 'react-router-dom';
@@ -13,7 +13,7 @@ import style from './app.style.css';
 export default class App extends React.Component {
     render() {
         return (
-            <Router>
+            <BrowserRouter>
                 <main className={style.container}>
                     <section className={style.content}>
                         <Switch>
@@ -23,7 +23,7 @@ export default class App extends React.Component {
                         </Switch>
                     </section>
                 </main>
-            </Router>
+            </BrowserRouter>
         );
     }
 }

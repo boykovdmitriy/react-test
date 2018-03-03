@@ -2,7 +2,6 @@ import {SalonServices} from "constants/salon-services";
 
 export const initialState = {
     isLoading: false,
-    services: [],
 };
 
 export const reducer = (state = initialState, action) => {
