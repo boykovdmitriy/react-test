@@ -10,8 +10,8 @@ class Salons extends React.Component {
     }
 
     render() {
-        const {isLoaded, salons} = this.props;
-        if (!isLoaded) return (
+        const {isLoading, salons} = this.props;
+        if (isLoading || salons.length === 0) return (
             <section>loading</section>
         );
         return (
@@ -25,9 +25,9 @@ class Salons extends React.Component {
 }
 
 const mapStateToProps = state => ({
-    isLoaded: state.salons.isLoaded,
-    salons: state.salons.salons,
-    totalPage: state.salons.total
+    isLoading: state.salons.list.isLoading,
+    salons: state.salons.list.items,
+    totalPage: state.salons.list.total
 });
 const mapDispatchToProps = dispatch => ({
     fetchSalons: (page, pageSize) => dispatch(salonsRequest(page, pageSize))

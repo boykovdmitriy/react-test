@@ -54,5 +54,9 @@ module.exports = {
             }
         ]
     },
-    plugins: [HtmlWebpackPluginConfig]
+    plugins: [HtmlWebpackPluginConfig],
+    devServer: {
+        compress: true,
+        port: 5000
+    }
 };
