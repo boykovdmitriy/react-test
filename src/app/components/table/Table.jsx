@@ -1,11 +1,12 @@
 import React from 'react';
+import style from './table.css';
 
 export const Table = ({children, headers}) => (
-    <table>
+    <table className={style.table}>
         <tbody>
-        <tr>
+        <tr >
             {headers.map(x => (
-                <th key={x}>{x}</th>
+                <th className={style.header} key={x}>{x}</th>
             ))}
         </tr>
         {children}

@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types'
+import style from './style.css'
 
 export class ProfileImage extends React.Component {
     render() {
         const {thumb} = this.props;
         return (
-            <img src={thumb}/>
+            <img className={style.image_preview} src={thumb}/>
         )
     }
 }
