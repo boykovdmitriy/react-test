@@ -6,6 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server",
     "test": "jest",
+    "test-update-snapchots": "jest --updateSnapshot",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage"
   },

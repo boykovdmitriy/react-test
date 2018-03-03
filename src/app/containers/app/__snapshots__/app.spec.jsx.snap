@@ -1,9 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`render App component 1`] = `
-<section
-  className="panel"
->
-  Rendered
-</section>
+<BrowserRouter>
+  <main>
+    <Switch>
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/"
+      />
+      <Route
+        component={[Function]}
+        path="/salon/:salonId"
+      />
+      <Route
+        component={[Function]}
+      />
+    </Switch>
+  </main>
+</BrowserRouter>
 `;
