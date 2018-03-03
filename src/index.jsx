@@ -1,10 +1,13 @@
 import React from 'react';
 import ReactDOM from "react-dom";
+import {Provider} from 'react-redux';
 import App from "containers/app";
 import {configStore} from 'configureStore';
 
 const store = configStore();
 ReactDOM.render(
-    <App store={store}/>,
+    <Provider store={store}>
+        <App/>
+    </Provider>,
     document.getElementById('react-app')
 );

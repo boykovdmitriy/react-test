@@ -23,7 +23,7 @@ describe('salons epics', () => {
     });
 
     it('produces salons success', () => {
-        const payload = {salons: [{id: 1}, {id: 2}], total: 100};
+        const payload = {response: {salons: [{id: 1}, {id: 2}], total: 100}};
         const config = {page: 1, pageSize: 25};
         nock('http://staging.salony.com').get(`/v5/salons?per_page=${config.pageSize}&page=${config.page}`)
             .reply(200, payload);
@@ -54,7 +54,7 @@ describe('salons epics', () => {
         );
     });
     it('produces salon success', () => {
-        const payload = {id: 10};
+        const payload = {response: {id: 10}};
         const config = {salonId: 10};
         nock('http://staging.salony.com').get(`http://staging.salony.com/v5/salons/${config.salonId}`)
             .reply(200, payload);

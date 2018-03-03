@@ -14,7 +14,7 @@ export function salonServicesRequest(action$) {
                 console.log(data);
                 return {
                     type: SalonServices.SALON_SERVICES_SUCCESS,
-                    payload: data,
+                    payload: data.response,
                 };
             }).catch(error => {
                 console.log(error);

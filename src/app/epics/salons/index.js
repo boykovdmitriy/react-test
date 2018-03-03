@@ -17,7 +17,7 @@ export function salonsRequest(action$) {
                 .map(data => {
                     return {
                         type: Salons.SALONS_SUCCESS,
-                        payload: data,
+                        payload: data.response,
                     };
                 })
                 .catch(error => {
