@@ -1,14 +1,35 @@
 import React from "react";
 import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
+import {InfiniteScroll} from 'components/infinite-scroll';
+
 import {ProfileImage} from "components/profile-image";
 import {salonsRequest} from "actions";
 import {Table, TableColumn, TableRow} from "components/table";
 
 class Salons extends React.Component {
+    constructor() {
+        super();
+        this.state = {
+            page: 1,
+            pageSize: 25
+        }
+    }
+
     componentDidMount() {
         const {fetchSalons} = this.props;
-        fetchSalons(1, 25);
+        const {page, pageSize} = this.state;
+        fetchSalons(page, pageSize);
+    }
+
+    handleScroll() {
+        this.setState({
+            page: this.state.page + 1
+        }, () => {
+            const {page, pageSize} = this.state;
+            const {fetchSalons} = this.props;
+            fetchSalons(page, pageSize);
+        });
     }
 
     render() {
@@ -17,20 +38,22 @@ class Salons extends React.Component {
             <section>loading</section>
         );
         return (
-            <Table headers={['Name', 'Website', 'Image']}>
-                {salons.map(x => (
-                    <TableRow key={x.id}>
-                        <TableColumn>{x.name}</TableColumn>
-                        <TableColumn>{!!x.website && <a href={x.website}>link</a>}</TableColumn>
-                        <TableColumn>{
-                            !!x.profile_image_urls &&
-                            <ProfileImage thumb={x.profile_image_urls.thumb}
-                                          origin={x.profile_image_urls.original}/>
-                        }</TableColumn>
-                        <TableColumn><Link to={`salon/${x.id}`}>Details</Link></TableColumn>
-                    </TableRow>
-                ))}
-            </Table>
+            <InfiniteScroll handleScroll={() => this.handleScroll()}>
+                <Table headers={['Name', 'Website', 'Image']}>
+                    {salons.map(x => (
+                        <TableRow key={x.id}>
+                            <TableColumn>{x.name}</TableColumn>
+                            <TableColumn>{!!x.website && <a href={x.website}>link</a>}</TableColumn>
+                            <TableColumn>{
+                                !!x.profile_image_urls &&
+                                <ProfileImage thumb={x.profile_image_urls.thumb}
+                                              origin={x.profile_image_urls.original}/>
+                            }</TableColumn>
+                            <TableColumn><Link to={`salon/${x.id}`}>Details</Link></TableColumn>
+                        </TableRow>
+                    ))}
+                </Table>
+            </InfiniteScroll>
         );
     }
 }

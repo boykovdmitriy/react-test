@@ -25,7 +25,7 @@ export const reducer = (state = initialState, action) => {
                 ...state,
                 list: {
                     ...state.list,
-                    items: action.payload.salons,
+                    items: [...state.list.items, ...action.payload.salons],
                     total: action.payload.total,
                     isLoading: false,
                 },
