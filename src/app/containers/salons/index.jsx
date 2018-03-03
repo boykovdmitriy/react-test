@@ -1,7 +1,9 @@
 import React from "react";
 import {connect} from 'react-redux';
+import {Link} from 'react-router-dom';
+import {ProfileImage} from "components/profile-image";
 import {salonsRequest} from "actions";
-import {Table, TableItem} from "components/table";
+import {Table, TableColumn, TableRow} from "components/table";
 
 class Salons extends React.Component {
     componentDidMount() {
@@ -15,9 +17,18 @@ class Salons extends React.Component {
             <section>loading</section>
         );
         return (
-            <Table>
+            <Table headers={['Name', 'Website', 'Image']}>
                 {salons.map(x => (
-                    <TableItem salon={x} key={x.id}/>
+                    <TableRow key={x.id}>
+                        <TableColumn>{x.name}</TableColumn>
+                        <TableColumn>{!!x.website && <a href={x.website}>link</a>}</TableColumn>
+                        <TableColumn>{
+                            !!x.profile_image_urls &&
+                            <ProfileImage thumb={x.profile_image_urls.thumb}
+                                          origin={x.profile_image_urls.original}/>
+                        }</TableColumn>
+                        <TableColumn><Link to={`salon/${x.id}`}>Details</Link></TableColumn>
+                    </TableRow>
                 ))}
             </Table>
         );

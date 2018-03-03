@@ -1,14 +1,14 @@
 import React from 'react';
 
-export const Table = ({children}) => (
+export const Table = ({children, headers}) => (
     <table>
         <tbody>
-            <tr>
-                <th>Name</th>
-                <th>Website</th>
-                <th>Image</th>
-            </tr>
-            {children}
+        <tr>
+            {headers.map(x => (
+                <th key={x}>{x}</th>
+            ))}
+        </tr>
+        {children}
         </tbody>
     </table>
 );

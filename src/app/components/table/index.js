@@ -1,2 +1,3 @@
 export * from './Table';
-export * from './TableItem';
+export * from './table-column';
+export * from './table-row';
