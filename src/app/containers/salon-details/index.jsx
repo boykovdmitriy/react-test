@@ -2,6 +2,7 @@ import React from "react";
 import {connect} from 'react-redux';
 import {salonServicesRequest, salonRequest} from "actions";
 import {Table, TableColumn, TableRow} from "components/table";
+import {WrappedSlider} from 'components/slider'
 import {SheduleOfWeek} from "./shedule-of-week/index";
 import style from './salon-details.css'
 
@@ -22,6 +23,13 @@ class SalonDetails extends React.Component {
         return (
             <article className={style.container}>
                 <h1>{salon.name}</h1>
+                <WrappedSlider>
+                    {
+                        !!salon.images && salon.images.map(x => (
+                            <img key={x.id} className={style.image} src={x.image_urls.medium}/>
+                        ))
+                    }
+                </WrappedSlider>
                 <section className={style.contentItem}>
                     <h2>Working hours</h2>
                     <SheduleOfWeek workHours={salon.hours}/>
