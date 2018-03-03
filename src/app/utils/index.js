@@ -26,7 +26,6 @@ export function rxAjax(action) {
     settings.url = action.endpoint;
     settings.method = action.method;
     settings.crossDomain = true;
-    settings.createXHR = () => new window.XMLHttpRequest();
     settings.headers = {
         'Content-Type': 'application/json',
     };
