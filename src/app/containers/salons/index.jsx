@@ -6,6 +6,7 @@ import {InfiniteScroll} from 'components/infinite-scroll';
 import {ProfileImage} from "components/profile-image";
 import {salonsRequest} from "actions";
 import {Table, TableColumn, TableRow} from "components/table";
+import {Spinner} from 'components/spinner';
 
 class Salons extends React.Component {
     constructor(props) {
@@ -52,7 +53,7 @@ class Salons extends React.Component {
                         ))}
                     </Table>
                 </InfiniteScroll>
-                {isLoading && <section>loading</section>}
+                {isLoading && <Spinner/>}
             </section>
         );
     }

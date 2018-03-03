@@ -4,6 +4,7 @@ import {salonServicesRequest, salonRequest} from "actions";
 import {Table, TableColumn, TableRow} from "components/table";
 import {WrappedSlider} from 'components/slider'
 import {SheduleOfWeek} from "./shedule-of-week/index";
+import {Spinner} from 'components/spinner';
 import style from './salon-details.css'
 
 class SalonDetails extends React.Component {
@@ -17,7 +18,7 @@ class SalonDetails extends React.Component {
         const {isLoadingSalon, salon, services} = this.props;
         if (isLoadingSalon || !salon) {
             return (
-                <section>loading</section>
+                <Spinner/>
             );
         }
         return (
