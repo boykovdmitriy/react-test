@@ -1,10 +1,26 @@
 import React from "react";
-import styles from "./app.style.css";
+import {
+    BrowserRouter as Router,
+    Route,
+    Switch
+} from 'react-router-dom';
+
+import SalonDetails from 'containers/salon-details';
+import Salons from 'containers/salons';
+import NotFoundPage from 'containers/not-found-page';
 
 export default class App extends React.Component {
     render() {
         return (
-            <section className={styles.panel}>Rendered</section>
+            <Router>
+                <main>
+                    <Switch>
+                        <Route exact path="/" component={Salons}/>
+                        <Route path="/salon/:salonId" component={SalonDetails}/>
+                        <Route component={NotFoundPage}/>
+                    </Switch>
+                </main>
+            </Router>
         );
     }
 }
