@@ -1,4 +1,4 @@
-import {Salons} from "constants";
+import {Salons} from "constants/salons";
 
 export function salonsRequest(page, pageSize) {
     return {
@@ -9,7 +9,7 @@ export function salonsRequest(page, pageSize) {
 
 export function salonRequest(salonId) {
     return {
-        type: Salons.SALONS_REQUEST,
+        type: Salons.SALON_REQUEST,
         payload: {salonId},
     };
 }

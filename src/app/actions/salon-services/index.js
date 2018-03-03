@@ -1,4 +1,4 @@
-import {SalonServices} from "constants";
+import {SalonServices} from "constants/salon-services";
 
 export function salonServicesRequest(salonId) {
     return {
