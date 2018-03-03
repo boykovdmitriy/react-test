@@ -23,7 +23,7 @@ describe('salonServicesRequest', () => {
     it('produces services of the salon', () => {
         const payload = {response: {services: [{id: 1}, {id: 2}]}};
         const salonId = 123;
-        nock('http://staging.salony.com').get(`/salons/${salonId}/services`)
+        nock('http://staging.salony.com').get(`/v5/salons/${salonId}/services`)
             .reply(200, payload);
 
         store.dispatch(actions.salonServicesRequest(salonId));

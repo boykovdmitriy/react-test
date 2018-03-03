@@ -1,7 +1,5 @@
 import React from "react";
 
-export default () =>{
-    return (
-        <section>Page not found</section>
-    );
-}
+export default () => (
+    <section>Page not found</section>
+)

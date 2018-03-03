@@ -1,6 +1,7 @@
 import React from "react";
 import {connect} from 'react-redux';
 import {salonsRequest} from "actions";
+import {Table, TableItem} from "components/table";
 
 class Salons extends React.Component {
     componentDidMount() {
@@ -9,15 +10,22 @@ class Salons extends React.Component {
     }
 
     render() {
-        const {isLoading} = this.props;
+        const {isLoaded, salons} = this.props;
+        if (!isLoaded) return (
+            <section>loading</section>
+        );
         return (
-            <span>{isLoading.toString()}</span>
+            <Table>
+                {salons.map(x => (
+                    <TableItem salon={x} key={x.id}/>
+                ))}
+            </Table>
         );
     }
 }
 
 const mapStateToProps = state => ({
-    isLoading: state.salons.isLoading,
+    isLoaded: state.salons.isLoaded,
     salons: state.salons.salons,
     totalPage: state.salons.total
 });
