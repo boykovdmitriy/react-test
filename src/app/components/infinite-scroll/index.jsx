@@ -2,8 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 export class InfiniteScroll extends React.Component {
+    constructor(props) {
+        super(props);
+        this.scrollEventListener = () => this.handleOnScroll();
+    }
+
     componentDidMount() {
-        window.addEventListener('scroll', () => this.handleOnScroll());
+        window.addEventListener('scroll', this.scrollEventListener);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('scroll', this.scrollEventListener);
     }
 
     handleOnScroll() {
