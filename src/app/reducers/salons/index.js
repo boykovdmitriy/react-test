@@ -18,6 +18,7 @@ export const reducer = (state = initialState, action) => {
                 list: {
                     ...state.list,
                     isLoading: true,
+                    page: action.payload.page
                 },
             };
         case Salons.SALONS_SUCCESS:
