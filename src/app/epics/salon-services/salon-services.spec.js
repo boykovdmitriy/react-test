@@ -35,4 +35,19 @@ describe('salonServicesRequest', () => {
             }
         );
     });
+    it('produces services of the salon failure', () => {
+        const payload = {status: 404, error: 'error'};
+        const salonId = 123;
+        nock('http://staging.salony.com').get(`/v5/salons/${salonId}/services`)
+            .reply(404, payload);
+
+        store.dispatch(actions.salonServicesRequest(salonId));
+        store.subscribe(x => {
+                expect(store.getActions()).toEqual([
+                    {type: SalonServices.SALON_SERVICES_REQUEST, payload: {salonId}},
+                    {type: SalonServices.SALON_SERVICES_FAILURE, payload}
+                ]);
+            }
+        );
+    });
 });

@@ -11,7 +11,10 @@
     "test:coverage": "jest --coverage"
   },
   "jest": {
-    "testPathIgnorePatterns" : ["<rootDir>/node_modules/", "<rootDir>/test/" ],
+    "testPathIgnorePatterns": [
+      "<rootDir>/node_modules/",
+      "<rootDir>/test/"
+    ],
     "moduleDirectories": [
       "node_modules",
       "src/app"

@@ -10,6 +10,7 @@ export function salonsRequest(action$) {
         switchMap((action) => {
             const endpoint = `http://staging.salony.com/v5/salons?per_page=${action.payload.pageSize}&page=${action.payload.page}`;
 
+            /* istanbul ignore next */
             return rxAjax({
                 endpoint,
                 method: 'GET',
@@ -32,6 +33,7 @@ export function salonRequest(action$) {
         switchMap((action) => {
             const endpoint = `http://staging.salony.com//v5/salons/${action.payload.salonId}`;
 
+            /* istanbul ignore next */
             return rxAjax({
                 endpoint,
                 method: 'GET',

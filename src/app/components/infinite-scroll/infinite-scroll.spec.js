@@ -31,7 +31,7 @@ describe('infinite scroll component', () => {
             </InfiniteScroll>
         )).toThrow();
     });
-    
+
     it('render infinite scroll without children. It is required field', () => {
         const handleScroll = () => {
         };
