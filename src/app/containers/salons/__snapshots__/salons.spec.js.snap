@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Salons render Salons component 1`] = `
+exports[`Salons shallow and passing store directly render Salons component 1`] = `
 <section>
   <InfiniteScroll
     handleScroll={[Function]}

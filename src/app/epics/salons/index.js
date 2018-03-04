@@ -14,18 +14,14 @@ export function salonsRequest(action$) {
                 endpoint,
                 method: 'GET',
             })
-                .map(data => {
-                    return {
-                        type: Salons.SALONS_SUCCESS,
-                        payload: data.response,
-                    };
-                })
-                .catch(error => {
-                    return ([{
-                        type: Salons.SALONS_FAILURE,
-                        payload: {message: error.error, status: error.status},
-                    }]);
-                });
+                .map(data => ({
+                    type: Salons.SALONS_SUCCESS,
+                    payload: data.response,
+                }))
+                .catch(error => ({
+                    type: Salons.SALONS_FAILURE,
+                    payload: {message: error.error, status: error.status},
+                }));
         })
     );
 }
@@ -40,18 +36,14 @@ export function salonRequest(action$) {
                 endpoint,
                 method: 'GET',
             })
-                .map(data => {
-                    return {
-                        type: Salons.SALON_SUCCESS,
-                        payload: data.response,
-                    };
-                })
-                .catch(error => {
-                    return ([{
-                        type: Salons.SALON_FAILURE,
-                        payload: {message: error.error, status: error.status},
-                    }]);
-                });
+                .map(data => ({
+                    type: Salons.SALON_SUCCESS,
+                    payload: data.response,
+                }))
+                .catch(error => ({
+                    type: Salons.SALON_FAILURE,
+                    payload: {message: error.error, status: error.status},
+                }));
         })
     );
 }

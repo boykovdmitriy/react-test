@@ -29,15 +29,11 @@ export class Salons extends React.Component {
         }
     }
 
-    handleScroll() {
-        this.loadNextPage();
-    }
-
     render() {
         const {isLoading, salons} = this.props;
         return (
             <section>
-                <InfiniteScroll handleScroll={() => this.handleScroll()}>
+                <InfiniteScroll handleScroll={() => this.loadNextPage()}>
                     <Table headers={['Name', 'Website', 'Image']}>
                         {salons && salons.length !== 0 && salons.map(x => (
                             <TableRow key={x.id}>
@@ -68,6 +64,3 @@ const mapDispatchToProps = dispatch => ({
     fetchSalons: (page, pageSize) => dispatch(salonsRequest(page, pageSize))
 });
 export default connect(mapStateToProps, mapDispatchToProps)(Salons);
-
-
-
