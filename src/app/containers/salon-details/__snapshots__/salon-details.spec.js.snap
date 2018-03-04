@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SalonDetails shallow and passing store directly render SalonDetails component 1`] = `<Spinner />`;

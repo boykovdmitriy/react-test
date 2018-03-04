@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SheduleOfWeek render SheduleOfWeek component 1`] = `
+<Table
+  headers={
+    Array [
+      "sun",
+      "mon",
+      "tue",
+      "wed",
+      "thu",
+      "fri",
+      "sat",
+    ]
+  }
+>
+  <TableRow>
+    <TableColumn
+      key="sun"
+    >
+      07:00-20:00
+    </TableColumn>
+    <TableColumn
+      key="mon"
+    >
+      07:00-20:00
+    </TableColumn>
+    <TableColumn
+      key="tue"
+    >
+      -
+    </TableColumn>
+    <TableColumn
+      key="wed"
+    >
+      07:00-20:00
+    </TableColumn>
+    <TableColumn
+      key="thu"
+    >
+      07:00-21:00
+    </TableColumn>
+    <TableColumn
+      key="fri"
+    >
+      07:00-20:00
+    </TableColumn>
+    <TableColumn
+      key="sat"
+    >
+      07:00-20:00
+    </TableColumn>
+  </TableRow>
+</Table>
+`;

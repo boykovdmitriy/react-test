@@ -7,11 +7,15 @@ import {SheduleOfWeek} from "./shedule-of-week/index";
 import {Spinner} from 'components/spinner';
 import style from './salon-details.css'
 
-class SalonDetails extends React.Component {
+export class SalonDetails extends React.Component {
     componentDidMount() {
         const {fetchSalon, fetchSalonServices, match: {params: {salonId}}} = this.props;
-        fetchSalon(salonId);
-        fetchSalonServices(salonId);
+        if (typeof fetchSalon === 'function') {
+            fetchSalon(salonId);
+        }
+        if (typeof fetchSalonServices === 'function') {
+            fetchSalonServices(salonId);
+        }
     }
 
     render() {

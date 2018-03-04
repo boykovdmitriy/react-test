@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Salons render Salons component 1`] = `
+<section>
+  <InfiniteScroll
+    handleScroll={[Function]}
+  >
+    <Table
+      headers={
+        Array [
+          "Name",
+          "Website",
+          "Image",
+        ]
+      }
+    />
+  </InfiniteScroll>
+</section>
+`;

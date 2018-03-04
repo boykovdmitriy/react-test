@@ -8,7 +8,7 @@ import {salonsRequest} from "actions";
 import {Table, TableColumn, TableRow} from "components/table";
 import {Spinner} from 'components/spinner';
 
-class Salons extends React.Component {
+export class Salons extends React.Component {
     constructor(props) {
         super(props);
         this.pageSize = 25;
@@ -24,7 +24,7 @@ class Salons extends React.Component {
     loadNextPage() {
         const {fetchSalons, loadedUntilPage, total} = this.props;
         const nextPage = loadedUntilPage ? loadedUntilPage + 1 : 1;
-        if (!total || nextPage <= total) {
+        if ((!total || nextPage <= total) && typeof fetchSalons === 'function') {
             fetchSalons(nextPage, this.pageSize);
         }
     }
@@ -39,7 +39,7 @@ class Salons extends React.Component {
             <section>
                 <InfiniteScroll handleScroll={() => this.handleScroll()}>
                     <Table headers={['Name', 'Website', 'Image']}>
-                        {salons.length !== 0 && salons.map(x => (
+                        {salons && salons.length !== 0 && salons.map(x => (
                             <TableRow key={x.id}>
                                 <TableColumn>{x.name}</TableColumn>
                                 <TableColumn>{!!x.website && <a href={x.website}>link</a>}</TableColumn>
