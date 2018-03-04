@@ -10,7 +10,11 @@ describe('salons reducer', () => {
     });
     it('should handle Salons.SALONS_REQUEST', () => {
         const action = {
-            type: Salons.SALONS_REQUEST
+            type: Salons.SALONS_REQUEST,
+            payload: {
+                page: 1,
+                pageSize: 25
+            }
         };
         expect(reducer(undefined, action).list.isLoading).toEqual(true);
     });

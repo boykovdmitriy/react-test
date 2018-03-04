@@ -2,21 +2,27 @@
 
 exports[`render App component 1`] = `
 <BrowserRouter>
-  <main>
-    <Switch>
-      <Route
-        component={[Function]}
-        exact={true}
-        path="/"
-      />
-      <Route
-        component={[Function]}
-        path="/salon/:salonId"
-      />
-      <Route
-        component={[Function]}
-      />
-    </Switch>
+  <main
+    className="container"
+  >
+    <section
+      className="content"
+    >
+      <Switch>
+        <Route
+          component={[Function]}
+          exact={true}
+          path="/"
+        />
+        <Route
+          component={[Function]}
+          path="/salon/:salonId"
+        />
+        <Route
+          component={[Function]}
+        />
+      </Switch>
+    </section>
   </main>
 </BrowserRouter>
 `;

@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`table component render column 1`] = `
+<td
+  className="column"
+>
+  column
+</td>
+`;
+
+exports[`table component render empty table component 1`] = `
+<table
+  className="table"
+>
+  <tbody>
+    <tr />
+  </tbody>
+</table>
+`;
+
+exports[`table component render row with column 1`] = `
+<tr
+  className="row"
+>
+  <TableColumn>
+    column
+  </TableColumn>
+</tr>
+`;
+
+exports[`table component render table with header 1`] = `
+<table
+  className="table"
+>
+  <tbody>
+    <tr>
+      <th
+        className="header"
+        key="name"
+      >
+        name
+      </th>
+      <th
+        className="header"
+        key="website"
+      >
+        website
+      </th>
+      <th
+        className="header"
+        key="age"
+      >
+        age
+      </th>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`table component render table with rows and columns 1`] = `
+<table
+  className="table"
+>
+  <tbody>
+    <tr />
+    <TableRow
+      key="1"
+    >
+      <TableColumn>
+        first
+      </TableColumn>
+    </TableRow>
+    <TableRow
+      key="2"
+    >
+      <TableColumn>
+        second
+      </TableColumn>
+    </TableRow>
+  </tbody>
+</table>
+`;

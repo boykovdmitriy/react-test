@@ -13,5 +13,4 @@ export class ProfileImage extends React.Component {
 
 ProfileImage.propTypes = {
     thumb: PropTypes.string.isRequired,
-    origin: PropTypes.string.isRequired
 };

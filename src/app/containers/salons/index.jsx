@@ -45,8 +45,7 @@ class Salons extends React.Component {
                                 <TableColumn>{!!x.website && <a href={x.website}>link</a>}</TableColumn>
                                 <TableColumn>{
                                     !!x.profile_image_urls &&
-                                    <ProfileImage thumb={x.profile_image_urls.thumb}
-                                                  origin={x.profile_image_urls.original}/>
+                                    <ProfileImage thumb={x.profile_image_urls.thumb}/>
                                 }</TableColumn>
                                 <TableColumn><Link to={`salon/${x.id}`}>Details</Link></TableColumn>
                             </TableRow>

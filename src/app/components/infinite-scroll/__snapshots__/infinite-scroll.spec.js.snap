@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`infinite scroll component render infinite scroll component 1`] = `
+<section>
+  <div
+    className="nice-object"
+  />
+</section>
+`;

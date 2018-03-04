@@ -12,4 +12,5 @@ export const Table = ({children, headers}) => (
             {children}
         </tbody>
     </table>
-);
+)
+

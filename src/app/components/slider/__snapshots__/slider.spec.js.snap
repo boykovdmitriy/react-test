@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`wrapped slider component render wrapped slider component 1`] = `
+<Carousel
+  autoPlay={true}
+  axis="horizontal"
+  centerMode={true}
+  centerSlidePercentage={80}
+  dynamicHeight={false}
+  emulateTouch={false}
+  infiniteLoop={true}
+  interval={1000}
+  onChange={[Function]}
+  onClickItem={[Function]}
+  onClickThumb={[Function]}
+  selectedItem={0}
+  showArrows={true}
+  showIndicators={false}
+  showStatus={false}
+  showThumbs={false}
+  statusFormatter={[Function]}
+  stopOnHover={true}
+  swipeScrollTolerance={5}
+  transitionTime={350}
+  useKeyboardArrows={false}
+  verticalSwipe="standard"
+  width="100%"
+>
+  <div>
+    1
+  </div>
+  <div>
+    2
+  </div>
+  <div>
+    3
+  </div>
+</Carousel>
+`;

@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`profile image component render profile-image component 1`] = `
+<img
+  className="image_preview"
+  src="http://s3-eu-west-1.amazonaws.com/staging-salony/image/profiles/files/000/000/212/thumb/6.jpg?1448538461"
+/>
+`;
