@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/app/containers/salons/index.jsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../index.html">All files</a> / <a href="index.html">src/app/containers/salons</a> index.jsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">94.44% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>17/18</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">83.33% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>15/18</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">88.89% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>8/9</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">93.75% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>15/16</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from "react";
+import {connect} from 'react-redux';
+import {Link} from 'react-router-dom';
+import {InfiniteScroll} from 'components/infinite-scroll';
+&nbsp;
+import {ProfileImage} from "components/profile-image";
+import {salonsRequest} from "actions";
+import {Table, TableColumn, TableRow} from "components/table";
+import {Spinner} from 'components/spinner';
+&nbsp;
+export class Salons extends React.Component {
+    constructor(props) {
+        super(props);
+        this.pageSize = 25;
+    }
+&nbsp;
+    componentDidMount() {
+        const {loadedUntilPage} = this.props;
+        if (!loadedUntilPage) {
+            this.loadNextPage();
+        }
+    }
+&nbsp;
+    loadNextPage() {
+        const {fetchSalons, loadedUntilPage, total} = this.props;
+        const nextPage = loadedUntilPage ? <span class="branch-0 cbranch-no" title="branch not covered" >loadedUntilPage + 1 </span>: 1;
+        if ((!total || <span class="branch-1 cbranch-no" title="branch not covered" >nextPage &lt;= total)</span> &amp;&amp; typeof fetchSalons === 'function') {
+            fetchSalons(nextPage, this.pageSize);
+        }
+    }
+&nbsp;
+    render() {
+        const {isLoading, salons} = this.props;
+        return (
+            &lt;section&gt;
+                &lt;InfiniteScroll handleScroll={<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >this.loadNextPage()}</span>&gt;
+                    &lt;Table headers={['Name', 'Website', 'Image']}&gt;
+                        {salons &amp;&amp; salons.length !== 0 &amp;&amp; salons.map(x =&gt; (
+                            &lt;TableRow key={x.id}&gt;
+                                &lt;TableColumn&gt;{x.name}&lt;/TableColumn&gt;
+                                &lt;TableColumn&gt;{!!x.website &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >&lt;a href={x.website}&gt;link&lt;/a&gt;}</span>&lt;/TableColumn&gt;
+                                &lt;TableColumn&gt;{
+                                    !!x.profile_image_urls &amp;&amp;
+                                    &lt;ProfileImage thumb={x.profile_image_urls.thumb}/&gt;
+                                }&lt;/TableColumn&gt;
+                                &lt;TableColumn&gt;&lt;Link to={`salon/${x.id}`}&gt;Details&lt;/Link&gt;&lt;/TableColumn&gt;
+                            &lt;/TableRow&gt;
+                        ))}
+                    &lt;/Table&gt;
+                &lt;/InfiniteScroll&gt;
+                {isLoading &amp;&amp; &lt;Spinner/&gt;}
+            &lt;/section&gt;
+        );
+    }
+}
+&nbsp;
+const mapStateToProps = state =&gt; ({
+    isLoading: state.salons.list.isLoading,
+    salons: state.salons.list.items,
+    totalPage: state.salons.list.total,
+    loadedUntilPage: state.salons.list.page
+});
+const mapDispatchToProps = dispatch =&gt; ({
+    fetchSalons: (page, pageSize) =&gt; dispatch(salonsRequest(page, pageSize))
+});
+export default connect(mapStateToProps, mapDispatchToProps)(Salons);</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Mar 04 2018 07:31:27 GMT+0300 (MSK)
+</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+</body>
+</html>

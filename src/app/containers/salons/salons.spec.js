@@ -8,7 +8,6 @@ import {Salons as SalonsConstants} from "constants/salons";
 import {Spinner} from 'components/spinner';
 import {InfiniteScroll} from 'components/infinite-scroll';
 
-
 const initialState = {
     salons: {
         list: {

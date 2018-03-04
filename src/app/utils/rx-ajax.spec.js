@@ -3,7 +3,6 @@ import expect from 'expect';
 import {rxAjax} from "./index";
 
 describe('rxAjax', () => {
-    let store;
     const url = 'http://example.com';
     const api = '/request';
     const payload = {
